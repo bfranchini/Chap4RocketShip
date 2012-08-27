@@ -18,15 +18,11 @@ namespace Chap4RocketShip
     {
         private GraphicsDeviceManager graphics;
         private SpriteBatch spriteBatch;
-        private Texture2D shipTexture, rockTexture, backgroundTexture;
-        private Vector2 shipPosition = new Vector2(100.0f, 100.0f);
+        private Texture2D rockTexture, backgroundTexture;
+       
         private Vector2 rockPosition = new Vector2(200.0f, 100.0f);
         private Vector2 backgroundPosition = new Vector2(0.0f, 0.0f);
-        private float shipRotation, rockRotation;
-
-        //ship dimensions
-        private Vector2 shipCenter;
-        private int shipWidth, shipHeight;
+        private float rockRotation;
 
         //rock dimensions
         private Vector2 rockCenter;
@@ -43,9 +39,9 @@ namespace Chap4RocketShip
 
         //variables for collision detection
         private const int ROCK = 0;
-        private const int SHIP = 1;
+        
         private Color[] rockColor;
-        private Color[] shipColor;
+        
 
         public Game1()
         {
@@ -75,18 +71,17 @@ namespace Chap4RocketShip
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            shipTexture = Content.Load<Texture2D>("Images\\ship");
+            
             rockTexture = Content.Load<Texture2D>("Images\\asteroid");
             backgroundTexture = Content.Load<Texture2D>("Images\\B1_stars");
             rockWidth = rockTexture.Width;
             rockHeight = rockTexture.Height;
-            shipWidth = shipTexture.Width;
-            shipHeight = shipTexture.Height;
+            
             backgroundWidth = Window.ClientBounds.Width;
             backgroundHeight = Window.ClientBounds.Height;
 
             rockCenter = new Vector2(rockWidth / 2, rockWidth / 2);
-            shipCenter = new Vector2(shipWidth / 2, shipHeight / 2);
+            
             backgroundCenter = new Vector2(backgroundWidth / 2, backgroundHeight / 2);
 
             //initialize color arrays used for collision detection
@@ -94,8 +89,7 @@ namespace Chap4RocketShip
             rockColor = new Color[rockTexture.Width * rockTexture.Height];
             //rock texture data is passed to rockColor array
             rockTexture.GetData(rockColor);
-            shipColor = new Color[shipTexture.Width * shipTexture.Height];
-            shipTexture.GetData(shipColor);
+            
         }
 
         /// <summary>
@@ -141,8 +135,7 @@ namespace Chap4RocketShip
                              SpriteEffects.None, 1.0f);
             spriteBatch.Draw(rockTexture, rockPosition, null, Color.White, rockRotation, rockCenter, 1.0f,
                              SpriteEffects.None, 0.0f);
-            spriteBatch.Draw(shipTexture, shipPosition, null, Color.White, shipRotation, shipCenter, 1.0f,
-                             SpriteEffects.None, 0.0f);
+           
             spriteBatch.End(); //stop drawing 2d images
             base.Draw(gameTime);
         }
@@ -221,42 +214,6 @@ namespace Chap4RocketShip
             }
         }
 
-        private float RotateShip(GameTime gameTime)
-        {
-            float rotation = 0.0f;
-            float speed = gameTime.ElapsedGameTime.Milliseconds / 300.0f; //speed of rotation
-
-            if (!move) //collision has ocurred so don't rotate ship any more
-                return rotation;
-
-            //handle user input
-            KeyboardState keyboard = Keyboard.GetState();
-            GamePadState gamePad = GamePad.GetState(PlayerIndex.One);
-
-            if (!gamePad.IsConnected)
-            {
-                if (keyboard.IsKeyDown(Keys.Right) && keyboard.IsKeyDown(Keys.Left))
-                {
-                    //don't rotate if right and left pressed at same time
-                }
-                else if (keyboard.IsKeyDown(Keys.Right)) //right
-                {
-                    rotation = speed;
-                }
-                else if (keyboard.IsKeyDown(Keys.Left)) //left
-                {
-                    rotation = -speed;
-                }
-                else //controller input
-                {
-                    rotation = gamePad.ThumbSticks.Left.X * speed;
-                }
-            }
-            //update rotation based on time scale and only store between 0 & 2pi
-            shipRotation += rotation;
-            shipRotation = shipRotation % (MathHelper.Pi * 2.0f);
-            return shipRotation;
-        }
 
         private void MoveShip(GameTime gameTime)
         {
