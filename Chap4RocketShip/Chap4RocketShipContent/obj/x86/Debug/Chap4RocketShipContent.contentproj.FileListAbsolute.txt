@@ -1,0 +1,1 @@
+C:\Users\Bruno\Documents\Visual Studio 2010\Projects\XNA\Chap4RocketShip\Chap4RocketShip\Chap4RocketShipContent\obj\x86\Debug\ResolveAssemblyReference.cache

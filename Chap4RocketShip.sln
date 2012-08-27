@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chap4RocketShip", "Chap4RocketShip\Chap4RocketShip\Chap4RocketShip.csproj", "{7109DAB9-3A33-40CB-BCE5-F7398C89872B}"
+EndProject
+Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "Chap4RocketShipContent", "Chap4RocketShip\Chap4RocketShipContent\Chap4RocketShipContent.contentproj", "{39411857-89BE-48CF-B7D5-9A00E2D7A1DD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7109DAB9-3A33-40CB-BCE5-F7398C89872B}.Debug|x86.ActiveCfg = Debug|x86
+		{7109DAB9-3A33-40CB-BCE5-F7398C89872B}.Debug|x86.Build.0 = Debug|x86
+		{7109DAB9-3A33-40CB-BCE5-F7398C89872B}.Release|x86.ActiveCfg = Release|x86
+		{7109DAB9-3A33-40CB-BCE5-F7398C89872B}.Release|x86.Build.0 = Release|x86
+		{39411857-89BE-48CF-B7D5-9A00E2D7A1DD}.Debug|x86.ActiveCfg = Debug|x86
+		{39411857-89BE-48CF-B7D5-9A00E2D7A1DD}.Release|x86.ActiveCfg = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
