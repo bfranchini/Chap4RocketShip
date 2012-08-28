@@ -1,0 +1,3 @@
+Content\Images\asteroid.xnb
+Content\Images\ship.xnb
+Content\Images\B1_stars.xnb

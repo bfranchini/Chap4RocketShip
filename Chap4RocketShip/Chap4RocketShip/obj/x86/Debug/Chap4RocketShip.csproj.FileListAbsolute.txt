@@ -1,0 +1,9 @@
+C:\Users\Bruno\Documents\Visual Studio 2010\Projects\XNA\Chap4RocketShip\Chap4RocketShip\Chap4RocketShip\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Bruno\Documents\Visual Studio 2010\Projects\XNA\Chap4RocketShip\Chap4RocketShip\Chap4RocketShip\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Bruno\Documents\Visual Studio 2010\Projects\XNA\Chap4RocketShip\Chap4RocketShip\Chap4RocketShip\bin\x86\Debug\Content\Images\asteroid.xnb
+C:\Users\Bruno\Documents\Visual Studio 2010\Projects\XNA\Chap4RocketShip\Chap4RocketShip\Chap4RocketShip\bin\x86\Debug\Content\Images\ship.xnb
+C:\Users\Bruno\Documents\Visual Studio 2010\Projects\XNA\Chap4RocketShip\Chap4RocketShip\Chap4RocketShip\bin\x86\Debug\Content\Images\B1_stars.xnb
+C:\Users\Bruno\Documents\Visual Studio 2010\Projects\XNA\Chap4RocketShip\Chap4RocketShip\Chap4RocketShip\bin\x86\Debug\Chap4RocketShip.exe
+C:\Users\Bruno\Documents\Visual Studio 2010\Projects\XNA\Chap4RocketShip\Chap4RocketShip\Chap4RocketShip\bin\x86\Debug\Chap4RocketShip.pdb
+C:\Users\Bruno\Documents\Visual Studio 2010\Projects\XNA\Chap4RocketShip\Chap4RocketShip\Chap4RocketShip\obj\x86\Debug\Chap4RocketShip.exe
+C:\Users\Bruno\Documents\Visual Studio 2010\Projects\XNA\Chap4RocketShip\Chap4RocketShip\Chap4RocketShip\obj\x86\Debug\Chap4RocketShip.pdb
