@@ -16,7 +16,7 @@ namespace Chap4RocketShip
     /// <summary>
     /// Spaceship!
     /// </summary>
-    class Spaceship
+    internal class Spaceship
     {
         private Vector2 shipPosition = new Vector2(100.0f, 100.0f);
         private Texture2D shipTexture;
@@ -30,7 +30,14 @@ namespace Chap4RocketShip
         private const int SHIP = 1;
         private Color[] shipColor;
 
-        //default constructor
+        //public properties 
+        public bool Move
+        {
+            get { return move; }
+        }
+         bool move;
+
+    //default constructor
         public void LoadContent(Game game)
         {
             //load and initialize ship
@@ -66,13 +73,13 @@ namespace Chap4RocketShip
             gamePadState = GamePad.GetState(PlayerIndex.One);
         }
 
-
+        //Rotate Ship
         private float RotateShip(GameTime gameTime)
         {
             float rotation = 0.0f;
             float speed = gameTime.ElapsedGameTime.Milliseconds / 300.0f; //speed of rotation
 
-            if (!move) //collision has ocurred so don't rotate ship any more
+            if (!Move) //collision has ocurred so don't rotate ship any more
                 return rotation;
 
             
