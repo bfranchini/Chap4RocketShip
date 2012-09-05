@@ -119,7 +119,7 @@ namespace Chap4RocketShip
                 this.Exit();
 
             //call movement and rotation functions here to ensure consistency each frame
-            //  UpdateAsteroid(gameTime);
+            UpdateAsteroid(gameTime);
             RotateShip(gameTime);
             MoveShip(gameTime);
             CheckCollisions();
